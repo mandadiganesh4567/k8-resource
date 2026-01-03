@@ -1,0 +1,14 @@
+piVersion: v1
+kind: Pod
+metadata:
+  name: environment
+spec:
+  containers:
+    - name: almalinux
+      image: almalinux:9
+      command: ["sleep","2000"]
+      env:
+        - name: Cource
+          value: "Devops"
+        - name: Duration
+          value: "25hr"
