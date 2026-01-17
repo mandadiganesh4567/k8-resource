@@ -2,7 +2,6 @@ kind: Service
 apiVersion: v1
 metadata:
   name: mysql-headless
-  namespace: expense
 spec:
   clusterIP: None # for headless service there is no cluster IP
   selector:
@@ -18,7 +17,6 @@ kind: Service
 apiVersion: v1
 metadata:
   name: mysql
-  namespace: expense
 spec:
   selector:
     project: expense
@@ -33,7 +31,6 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mysql
-  namespace: expense
 spec:
   selector:
     matchLabels:
